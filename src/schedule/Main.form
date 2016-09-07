@@ -91,8 +91,6 @@
         <Property name="persistenceUnit" type="java.lang.String" value="pu"/>
       </Properties>
     </Component>
-    <Component class="java.util.List" name="list1">
-    </Component>
     <Component class="javax.persistence.Query" name="employeesQuery3">
       <Properties>
         <Property name="query" type="java.lang.String" value="SELECT e FROM Employees e"/>
@@ -230,9 +228,9 @@
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="jTabbedPane1" min="-2" pref="514" max="-2" attributes="0"/>
-              <EmptySpace pref="215" max="32767" attributes="0"/>
+              <EmptySpace pref="307" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

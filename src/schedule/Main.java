@@ -40,7 +40,6 @@ public class Main extends javax.swing.JFrame {
         entityManager2 = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("schedulePU").createEntityManager();
         entityManager3 = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("schedulePU").createEntityManager();
         entityManager4 = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("schedulePU").createEntityManager();
-        list1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : ((javax.persistence.Query)null).getResultList();
         employeesQuery3 = java.beans.Beans.isDesignTime() ? null : schedulePUEntityManager.createQuery("SELECT e FROM Employees e");
         employeesList3 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : employeesQuery3.getResultList();
         employeesQuery4 = java.beans.Beans.isDesignTime() ? null : schedulePUEntityManager.createQuery("SELECT e FROM Employees e");
@@ -204,9 +203,9 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(27, 27, 27))
             .addGroup(layout.createSequentialGroup()
-                .addGap(98, 98, 98)
+                .addContainerGap()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(215, Short.MAX_VALUE))
+                .addContainerGap(307, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -299,7 +298,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTable jTable7;
     private javax.swing.JTable jTable8;
     private javax.swing.JTable jTable9;
-    private java.util.List list1;
     private javax.persistence.EntityManager schedulePUEntityManager;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
