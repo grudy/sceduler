@@ -53,21 +53,21 @@ public class Main extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
         jButton1 = new javax.swing.JButton();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        jTable5 = new javax.swing.JTable();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        jTable6 = new javax.swing.JTable();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        jTable7 = new javax.swing.JTable();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        jTable8 = new javax.swing.JTable();
-        jScrollPane9 = new javax.swing.JScrollPane();
-        jTable9 = new javax.swing.JTable();
+        week_tab = new javax.swing.JTabbedPane();
+        monday_pane = new javax.swing.JScrollPane();
+        monday_table = new javax.swing.JTable();
+        tuesday_pane = new javax.swing.JScrollPane();
+        tuesday_table = new javax.swing.JTable();
+        wednesday_pane = new javax.swing.JScrollPane();
+        wednesday_table = new javax.swing.JTable();
+        thursday_pane = new javax.swing.JScrollPane();
+        thursday_table = new javax.swing.JTable();
+        friday_pane = new javax.swing.JScrollPane();
+        friday_table = new javax.swing.JTable();
+        saturday_pane = new javax.swing.JScrollPane();
+        saturday_table = new javax.swing.JTable();
+        sunday_pane = new javax.swing.JScrollPane();
+        sunday_table = new javax.swing.JTable();
 
         jMenu1.setText("jMenu1");
 
@@ -82,7 +82,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList, jTable3);
+        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList, monday_table);
         org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${employeeName}"));
         columnBinding.setColumnName("Employee Name");
         columnBinding.setColumnClass(String.class);
@@ -95,11 +95,11 @@ public class Main extends javax.swing.JFrame {
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
 
-        jScrollPane3.setViewportView(jTable3);
+        monday_pane.setViewportView(monday_table);
 
-        jTabbedPane1.addTab("Monday", jScrollPane3);
+        week_tab.addTab("Monday", monday_pane);
 
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList1, jTable4);
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList1, tuesday_table);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${employeeName}"));
         columnBinding.setColumnName("Employee Name");
         columnBinding.setColumnClass(String.class);
@@ -112,11 +112,11 @@ public class Main extends javax.swing.JFrame {
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
 
-        jScrollPane4.setViewportView(jTable4);
+        tuesday_pane.setViewportView(tuesday_table);
 
-        jTabbedPane1.addTab("Tuesday", jScrollPane4);
+        week_tab.addTab("Tuesday", tuesday_pane);
 
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList2, jTable5);
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList2, wednesday_table);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${employeeName}"));
         columnBinding.setColumnName("Employee Name");
         columnBinding.setColumnClass(String.class);
@@ -128,11 +128,11 @@ public class Main extends javax.swing.JFrame {
         columnBinding.setColumnClass(java.util.Date.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
-        jScrollPane5.setViewportView(jTable5);
+        wednesday_pane.setViewportView(wednesday_table);
 
-        jTabbedPane1.addTab("Wednesday", jScrollPane5);
+        week_tab.addTab("Wednesday", wednesday_pane);
 
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList6, jTable6);
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList6, thursday_table);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${employeeName}"));
         columnBinding.setColumnName("Employee Name");
         columnBinding.setColumnClass(String.class);
@@ -144,11 +144,11 @@ public class Main extends javax.swing.JFrame {
         columnBinding.setColumnClass(java.util.Date.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
-        jScrollPane6.setViewportView(jTable6);
+        thursday_pane.setViewportView(thursday_table);
 
-        jTabbedPane1.addTab("Thursday", jScrollPane6);
+        week_tab.addTab("Thursday", thursday_pane);
 
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList, jTable7);
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList, friday_table);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${employeeName}"));
         columnBinding.setColumnName("Employee Name");
         columnBinding.setColumnClass(String.class);
@@ -161,11 +161,11 @@ public class Main extends javax.swing.JFrame {
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
 
-        jScrollPane7.setViewportView(jTable7);
+        friday_pane.setViewportView(friday_table);
 
-        jTabbedPane1.addTab("Friday", jScrollPane7);
+        week_tab.addTab("Friday", friday_pane);
 
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList, jTable8);
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList, saturday_table);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${employeeName}"));
         columnBinding.setColumnName("Employee Name");
         columnBinding.setColumnClass(String.class);
@@ -178,11 +178,11 @@ public class Main extends javax.swing.JFrame {
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
 
-        jScrollPane8.setViewportView(jTable8);
+        saturday_pane.setViewportView(saturday_table);
 
-        jTabbedPane1.addTab("Saturday", jScrollPane8);
+        week_tab.addTab("Saturday", saturday_pane);
 
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList, jTable9);
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList, sunday_table);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${employeeName}"));
         columnBinding.setColumnName("Employee Name");
         columnBinding.setColumnClass(String.class);
@@ -195,9 +195,9 @@ public class Main extends javax.swing.JFrame {
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
 
-        jScrollPane9.setViewportView(jTable9);
+        sunday_pane.setViewportView(sunday_table);
 
-        jTabbedPane1.addTab("Sunday", jScrollPane9);
+        week_tab.addTab("Sunday", sunday_pane);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -209,14 +209,14 @@ public class Main extends javax.swing.JFrame {
                 .addGap(27, 27, 27))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(week_tab, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(307, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(94, 94, 94)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(week_tab, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(16, 16, 16))
@@ -291,25 +291,25 @@ public class Main extends javax.swing.JFrame {
     private javax.persistence.EntityManager entityManager3;
     private javax.persistence.EntityManager entityManager4;
     private javax.swing.Box.Filler filler1;
+    private javax.swing.JScrollPane friday_pane;
+    private javax.swing.JTable friday_table;
     private javax.swing.JButton jButton1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
-    private javax.swing.JTable jTable5;
-    private javax.swing.JTable jTable6;
-    private javax.swing.JTable jTable7;
-    private javax.swing.JTable jTable8;
-    private javax.swing.JTable jTable9;
+    private javax.swing.JScrollPane monday_pane;
+    private javax.swing.JTable monday_table;
+    private javax.swing.JScrollPane saturday_pane;
+    private javax.swing.JTable saturday_table;
     private javax.persistence.EntityManager schedulePUEntityManager;
+    private javax.swing.JScrollPane sunday_pane;
+    private javax.swing.JTable sunday_table;
+    private javax.swing.JScrollPane thursday_pane;
+    private javax.swing.JTable thursday_table;
+    private javax.swing.JScrollPane tuesday_pane;
+    private javax.swing.JTable tuesday_table;
+    private javax.swing.JScrollPane wednesday_pane;
+    private javax.swing.JTable wednesday_table;
+    private javax.swing.JTabbedPane week_tab;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

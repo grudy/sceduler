@@ -229,7 +229,7 @@
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Component id="jTabbedPane1" min="-2" pref="514" max="-2" attributes="0"/>
+              <Component id="week_tab" min="-2" pref="514" max="-2" attributes="0"/>
               <EmptySpace pref="307" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -238,7 +238,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
-              <Component id="jTabbedPane1" min="-2" pref="307" max="-2" attributes="0"/>
+              <Component id="week_tab" min="-2" pref="307" max="-2" attributes="0"/>
               <EmptySpace pref="40" max="32767" attributes="0"/>
               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
@@ -255,11 +255,11 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
     </Component>
-    <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+    <Container class="javax.swing.JTabbedPane" name="week_tab">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+        <Container class="javax.swing.JScrollPane" name="monday_pane">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
@@ -273,9 +273,9 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="jTable3">
+            <Component class="javax.swing.JTable" name="monday_table">
               <BindingProperties>
-                <BindingProperty name="elements" source="employeesList" target="jTable3" targetPath="elements" updateStrategy="0" immediately="true">
+                <BindingProperty name="elements" source="employeesList" target="monday_table" targetPath="elements" updateStrategy="0" immediately="true">
                   <Subbinding sourcePath="${employeeName}">
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
                   </Subbinding>
@@ -290,7 +290,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+        <Container class="javax.swing.JScrollPane" name="tuesday_pane">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
@@ -304,9 +304,9 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="jTable4">
+            <Component class="javax.swing.JTable" name="tuesday_table">
               <BindingProperties>
-                <BindingProperty name="elements" source="employeesList1" target="jTable4" targetPath="elements" updateStrategy="0" immediately="true">
+                <BindingProperty name="elements" source="employeesList1" target="tuesday_table" targetPath="elements" updateStrategy="0" immediately="true">
                   <Subbinding sourcePath="${employeeName}">
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
                   </Subbinding>
@@ -321,7 +321,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane5">
+        <Container class="javax.swing.JScrollPane" name="wednesday_pane">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
@@ -335,7 +335,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="jTable5">
+            <Component class="javax.swing.JTable" name="wednesday_table">
               <Properties>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                   <TableColumnModel selectionModel="0"/>
@@ -345,7 +345,7 @@
                 </Property>
               </Properties>
               <BindingProperties>
-                <BindingProperty name="elements" source="employeesList2" target="jTable5" targetPath="elements" updateStrategy="0" immediately="true">
+                <BindingProperty name="elements" source="employeesList2" target="wednesday_table" targetPath="elements" updateStrategy="0" immediately="true">
                   <Subbinding sourcePath="${employeeName}">
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
                   </Subbinding>
@@ -360,7 +360,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane6">
+        <Container class="javax.swing.JScrollPane" name="thursday_pane">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
@@ -374,7 +374,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="jTable6">
+            <Component class="javax.swing.JTable" name="thursday_table">
               <Properties>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                   <TableColumnModel selectionModel="0">
@@ -405,7 +405,7 @@
                 </Property>
               </Properties>
               <BindingProperties>
-                <BindingProperty name="elements" source="employeesList6" target="jTable6" targetPath="elements" updateStrategy="0" immediately="true">
+                <BindingProperty name="elements" source="employeesList6" target="thursday_table" targetPath="elements" updateStrategy="0" immediately="true">
                   <Subbinding sourcePath="${employeeName}">
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
                   </Subbinding>
@@ -420,7 +420,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane7">
+        <Container class="javax.swing.JScrollPane" name="friday_pane">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
@@ -434,9 +434,9 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="jTable7">
+            <Component class="javax.swing.JTable" name="friday_table">
               <BindingProperties>
-                <BindingProperty name="elements" source="employeesList" target="jTable7" targetPath="elements" updateStrategy="0" immediately="true">
+                <BindingProperty name="elements" source="employeesList" target="friday_table" targetPath="elements" updateStrategy="0" immediately="true">
                   <Subbinding sourcePath="${employeeName}">
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
                   </Subbinding>
@@ -451,7 +451,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane8">
+        <Container class="javax.swing.JScrollPane" name="saturday_pane">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
@@ -465,9 +465,9 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="jTable8">
+            <Component class="javax.swing.JTable" name="saturday_table">
               <BindingProperties>
-                <BindingProperty name="elements" source="employeesList" target="jTable8" targetPath="elements" updateStrategy="0" immediately="true">
+                <BindingProperty name="elements" source="employeesList" target="saturday_table" targetPath="elements" updateStrategy="0" immediately="true">
                   <Subbinding sourcePath="${employeeName}">
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
                   </Subbinding>
@@ -482,7 +482,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane9">
+        <Container class="javax.swing.JScrollPane" name="sunday_pane">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
@@ -496,9 +496,9 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="jTable9">
+            <Component class="javax.swing.JTable" name="sunday_table">
               <BindingProperties>
-                <BindingProperty name="elements" source="employeesList" target="jTable9" targetPath="elements" updateStrategy="0" immediately="true">
+                <BindingProperty name="elements" source="employeesList" target="sunday_table" targetPath="elements" updateStrategy="0" immediately="true">
                   <Subbinding sourcePath="${employeeName}">
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
                   </Subbinding>
