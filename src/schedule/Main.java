@@ -36,10 +36,6 @@ public class Main extends javax.swing.JFrame {
         employeesList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : employeesQuery1.getResultList();
         employeesQuery2 = java.beans.Beans.isDesignTime() ? null : schedulePUEntityManager.createQuery("SELECT e FROM Employees e");
         employeesList2 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : employeesQuery2.getResultList();
-        entityManager1 = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("schedulePU").createEntityManager();
-        entityManager2 = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("schedulePU").createEntityManager();
-        entityManager3 = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("schedulePU").createEntityManager();
-        entityManager4 = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("schedulePU").createEntityManager();
         employeesQuery3 = java.beans.Beans.isDesignTime() ? null : schedulePUEntityManager.createQuery("SELECT e FROM Employees e");
         employeesList3 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : employeesQuery3.getResultList();
         employeesQuery4 = java.beans.Beans.isDesignTime() ? null : schedulePUEntityManager.createQuery("SELECT e FROM Employees e");
@@ -94,12 +90,11 @@ public class Main extends javax.swing.JFrame {
         columnBinding.setColumnClass(java.util.Date.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
-
         monday_pane.setViewportView(monday_table);
 
         week_tab.addTab("Monday", monday_pane);
 
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList1, tuesday_table);
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList, tuesday_table);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${employeeName}"));
         columnBinding.setColumnName("Employee Name");
         columnBinding.setColumnClass(String.class);
@@ -111,7 +106,6 @@ public class Main extends javax.swing.JFrame {
         columnBinding.setColumnClass(java.util.Date.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
-
         tuesday_pane.setViewportView(tuesday_table);
 
         week_tab.addTab("Tuesday", tuesday_pane);
@@ -132,7 +126,7 @@ public class Main extends javax.swing.JFrame {
 
         week_tab.addTab("Wednesday", wednesday_pane);
 
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList6, thursday_table);
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList, thursday_table);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${employeeName}"));
         columnBinding.setColumnName("Employee Name");
         columnBinding.setColumnClass(String.class);
@@ -160,7 +154,6 @@ public class Main extends javax.swing.JFrame {
         columnBinding.setColumnClass(java.util.Date.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
-
         friday_pane.setViewportView(friday_table);
 
         week_tab.addTab("Friday", friday_pane);
@@ -177,7 +170,6 @@ public class Main extends javax.swing.JFrame {
         columnBinding.setColumnClass(java.util.Date.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
-
         saturday_pane.setViewportView(saturday_table);
 
         week_tab.addTab("Saturday", saturday_pane);
@@ -194,7 +186,6 @@ public class Main extends javax.swing.JFrame {
         columnBinding.setColumnClass(java.util.Date.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
-
         sunday_pane.setViewportView(sunday_table);
 
         week_tab.addTab("Sunday", sunday_pane);
@@ -209,15 +200,15 @@ public class Main extends javax.swing.JFrame {
                 .addGap(27, 27, 27))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(week_tab, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(307, Short.MAX_VALUE))
+                .addComponent(week_tab, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(320, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(94, 94, 94)
-                .addComponent(week_tab, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addContainerGap(148, Short.MAX_VALUE)
+                .addComponent(week_tab, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59)
                 .addComponent(jButton1)
                 .addGap(16, 16, 16))
         );
@@ -286,10 +277,6 @@ public class Main extends javax.swing.JFrame {
     private javax.persistence.Query employeesQuery5;
     private javax.persistence.Query employeesQuery6;
     private javax.persistence.Query employeesQuery7;
-    private javax.persistence.EntityManager entityManager1;
-    private javax.persistence.EntityManager entityManager2;
-    private javax.persistence.EntityManager entityManager3;
-    private javax.persistence.EntityManager entityManager4;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JScrollPane friday_pane;
     private javax.swing.JTable friday_table;

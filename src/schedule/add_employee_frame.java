@@ -17,9 +17,9 @@ public class add_employee_frame extends javax.swing.JDialog {
     /**
      * Creates new form add_employee_frame
      */
-    
-    Hashtable table_time = new Hashtable(); 
-    
+   // ResultSet resultsfortest 
+    //Hashtable table_time = new Hashtable(); 
+    //ResultSet 
     public add_employee_frame(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -42,21 +42,21 @@ public class add_employee_frame extends javax.swing.JDialog {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        monday_label = new javax.swing.JButton();
         monday_slider = new slider.RangeSlider();
         tuesday_slider = new slider.RangeSlider();
-        tuesday_label = new javax.swing.JButton();
         wednesday_slider = new slider.RangeSlider();
-        wednesday_label = new javax.swing.JButton();
         thursday_slider = new slider.RangeSlider();
-        thursday_label = new javax.swing.JButton();
         friday_slider = new slider.RangeSlider();
-        friday_label = new javax.swing.JButton();
         saturday_slider = new slider.RangeSlider();
         saturday_label = new javax.swing.JButton();
         sunday_slider = new slider.RangeSlider();
         sunday_label = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
+        monday_label = new javax.swing.JLabel();
+        tuesday_label = new javax.swing.JLabel();
+        wednesday_label = new javax.swing.JLabel();
+        thursday_label = new javax.swing.JLabel();
+        Friday = new javax.swing.JLabel();
         add_employee_done_button = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -73,8 +73,7 @@ public class add_employee_frame extends javax.swing.JDialog {
 
         jPanel2.setToolTipText("");
 
-        monday_label.setText("Monday");
-
+        monday_slider.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         monday_slider.setMajorTickSpacing(1);
         table_time.put(new Integer(0), new JLabel("12am"));
         table_time.put(new Integer(1), new JLabel("1am"));
@@ -161,8 +160,6 @@ public class add_employee_frame extends javax.swing.JDialog {
             }
         });
 
-        tuesday_label.setText("Tuesday");
-
         wednesday_slider.setMajorTickSpacing(1);
         wednesday_slider.setMaximum(24);
         wednesday_slider.setMinorTickSpacing(1);
@@ -206,8 +203,6 @@ public class add_employee_frame extends javax.swing.JDialog {
             }
         });
 
-        wednesday_label.setText("Wednesday");
-
         thursday_slider.setMajorTickSpacing(1);
         thursday_slider.setMaximum(24);
         thursday_slider.setMinorTickSpacing(1);
@@ -227,8 +222,6 @@ public class add_employee_frame extends javax.swing.JDialog {
             }
         });
 
-        thursday_label.setText("Thursday");
-
         friday_slider.setMajorTickSpacing(1);
         friday_slider.setMaximum(24);
         friday_slider.setLabelTable(table_time);
@@ -247,8 +240,6 @@ public class add_employee_frame extends javax.swing.JDialog {
                 friday_sliderPropertyChange(evt);
             }
         });
-
-        friday_label.setText("Friday");
 
         saturday_slider.setMajorTickSpacing(1);
         saturday_slider.setMaximum(24);
@@ -292,27 +283,38 @@ public class add_employee_frame extends javax.swing.JDialog {
 
         sunday_label.setText("Sunday");
 
+        monday_label.setText("Monday");
+
+        tuesday_label.setText("Tuesday");
+
+        wednesday_label.setText("Wednesday");
+
+        thursday_label.setText("Thursday");
+
+        Friday.setText("Friday");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(monday_label, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(wednesday_label)
-                                .addComponent(tuesday_label)
-                                .addComponent(thursday_label)
-                                .addComponent(friday_label))
-                            .addGap(2, 2, 2)))
-                    .addComponent(saturday_label)
-                    .addComponent(sunday_label))
-                .addGap(34, 34, 34)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(saturday_label)
+                            .addComponent(sunday_label)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(monday_label)
+                            .addComponent(tuesday_label)
+                            .addComponent(wednesday_label)
+                            .addComponent(thursday_label)
+                            .addComponent(Friday))))
+                .addGap(36, 36, 36)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(friday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 905, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(thursday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 905, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -324,7 +326,7 @@ public class add_employee_frame extends javax.swing.JDialog {
                 .addGap(0, 31, Short.MAX_VALUE))
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {friday_label, monday_label, saturday_label, sunday_label, thursday_label, tuesday_label, wednesday_label});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {saturday_label, sunday_label});
 
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -336,27 +338,38 @@ public class add_employee_frame extends javax.swing.JDialog {
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(monday_slider, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(monday_label, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(18, 18, 18)
+                            .addComponent(monday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addComponent(monday_label)))
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tuesday_slider, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tuesday_label, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(tuesday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(36, 36, 36)
+                                .addComponent(tuesday_label)))
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(44, 44, 44)
-                                .addComponent(wednesday_label))
+                                .addComponent(wednesday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(47, 47, 47)
+                                .addComponent(wednesday_label)))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addComponent(thursday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(wednesday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(33, 33, 33)
+                                .addComponent(thursday_label)
+                                .addGap(37, 37, 37)))
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(thursday_label, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(thursday_slider, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(friday_slider, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(friday_label, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(friday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addComponent(Friday)))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(saturday_slider, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -369,7 +382,7 @@ public class add_employee_frame extends javax.swing.JDialog {
                             .addComponent(sunday_label, javax.swing.GroupLayout.Alignment.TRAILING)))))
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {friday_label, monday_label, saturday_label, sunday_label, sunday_slider, thursday_label, tuesday_label, wednesday_label});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {saturday_label, sunday_label, sunday_slider});
 
         add_employee_done_button.setText("Done");
         add_employee_done_button.addActionListener(new java.awt.event.ActionListener() {
@@ -508,6 +521,29 @@ public class add_employee_frame extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void add_employee_done_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add_employee_done_buttonActionPerformed
+        // TODO add your handling code here:
+       // if
+         Employees en1 = new Employees();
+            en1.setFirstName(first_name_input.getText());
+            en1.setLastName(last_name_input.getText());
+            en1.setEmployeeName(first_name_input.getText()  + " " + last_name_input.getText());
+             EntityManagerFactory creator = Persistence.createEntityManagerFactory("schedulePU");
+            EmployeesJpaController called = new EmployeesJpaController(creator);
+            called.create(en1);
+            //.executeUpdate();
+            Main refresher = new Main();
+            if(monday_slider.getValue() - monday_slider.getUpperValue() > 0)
+            {
+                
+            }   
+            refresher.setVisible(true);
+            this.setVisible(false);
+           // main a = new main();
+            
+        
+    }//GEN-LAST:event_add_employee_done_buttonActionPerformed
+
     private void sunday_sliderPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_sunday_sliderPropertyChange
         // TODO add your handling code here:
     }//GEN-LAST:event_sunday_sliderPropertyChange
@@ -535,21 +571,6 @@ public class add_employee_frame extends javax.swing.JDialog {
     private void monday_sliderPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_monday_sliderPropertyChange
         // TODO add your handling code here:
     }//GEN-LAST:event_monday_sliderPropertyChange
-
-    private void add_employee_done_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add_employee_done_buttonActionPerformed
-        // TODO add your handling code here:
-       // if
-         Employees en1 = new Employees();
-            en1.setFirstName(first_name_input.getText());
-            en1.setLastName(last_name_input.getText());
-            en1.setEmployeeName(first_name_input.getText()  + " " + last_name_input.getText());
-             EntityManagerFactory creator = Persistence.createEntityManagerFactory("schedulePU");
-            EmployeesJpaController called = new EmployeesJpaController(creator);
-            called.create(en1);
-           // main a = new main();
-            
-        
-    }//GEN-LAST:event_add_employee_done_buttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -594,10 +615,10 @@ public class add_employee_frame extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Friday;
     private javax.swing.JButton add_employee_done_button;
     private javax.swing.JTextField email_input;
     private javax.swing.JTextField first_name_input;
-    private javax.swing.JButton friday_label;
     private slider.RangeSlider friday_slider;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -609,17 +630,17 @@ public class add_employee_frame extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField last_name_input;
-    private javax.swing.JButton monday_label;
+    private javax.swing.JLabel monday_label;
     private slider.RangeSlider monday_slider;
     private javax.swing.JButton saturday_label;
     private slider.RangeSlider saturday_slider;
     private javax.swing.JButton sunday_label;
     private slider.RangeSlider sunday_slider;
-    private javax.swing.JButton thursday_label;
+    private javax.swing.JLabel thursday_label;
     private slider.RangeSlider thursday_slider;
-    private javax.swing.JButton tuesday_label;
+    private javax.swing.JLabel tuesday_label;
     private slider.RangeSlider tuesday_slider;
-    private javax.swing.JButton wednesday_label;
+    private javax.swing.JLabel wednesday_label;
     private slider.RangeSlider wednesday_slider;
     // End of variables declaration//GEN-END:variables
 }

@@ -78,26 +78,28 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                          <Component id="monday_label" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="wednesday_label" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="tuesday_label" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="thursday_label" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="friday_label" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="saturday_label" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="sunday_label" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="saturday_label" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="sunday_label" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="monday_label" min="-2" max="-2" attributes="0"/>
+                              <Component id="tuesday_label" min="-2" max="-2" attributes="0"/>
+                              <Component id="wednesday_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="thursday_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="Friday" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   <Component id="jSeparator1" min="-2" pref="36" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="friday_slider" min="-2" pref="905" max="-2" attributes="0"/>
                       <Component id="thursday_slider" min="-2" pref="905" max="-2" attributes="0"/>
@@ -122,35 +124,52 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="monday_slider" alignment="1" min="-2" pref="38" max="-2" attributes="0"/>
-                              <Component id="monday_label" linkSize="2" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="monday_slider" min="-2" pref="38" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                  <Component id="monday_label" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="tuesday_slider" alignment="1" min="-2" pref="38" max="-2" attributes="0"/>
-                              <Component id="tuesday_label" linkSize="2" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="tuesday_slider" min="-2" pref="38" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                  <Component id="tuesday_label" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                                  <Component id="wednesday_label" linkSize="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="wednesday_slider" min="-2" pref="38" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                                  <Component id="wednesday_label" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                  <Component id="thursday_slider" min="-2" pref="38" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="wednesday_slider" min="-2" pref="38" max="-2" attributes="0"/>
+                                  <Component id="thursday_label" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="thursday_label" linkSize="2" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="thursday_slider" alignment="1" min="-2" pref="38" max="-2" attributes="0"/>
+                              <Component id="friday_slider" min="-2" pref="38" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                  <Component id="Friday" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="friday_slider" alignment="1" min="-2" pref="38" max="-2" attributes="0"/>
-                              <Component id="friday_label" linkSize="2" alignment="1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="saturday_slider" alignment="1" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
@@ -170,13 +189,13 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="monday_label">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Monday"/>
-          </Properties>
-        </Component>
         <Component class="slider.RangeSlider" name="monday_slider">
           <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                <CompoundBorder/>
+              </Border>
+            </Property>
             <Property name="majorTickSpacing" type="int" value="1" postCode="table_time.put(new Integer(0), new JLabel(&quot;12am&quot;));&#xa;table_time.put(new Integer(1), new JLabel(&quot;1am&quot;));&#xa;table_time.put(new Integer(2), new JLabel(&quot;2am&quot;));&#xa;table_time.put(new Integer(3), new JLabel(&quot;3am&quot;));&#xa;table_time.put(new Integer(4), new JLabel(&quot;4am&quot;));&#xa;table_time.put(new Integer(5), new JLabel(&quot;5am&quot;));&#xa;table_time.put(new Integer(6), new JLabel(&quot;6am&quot;));&#xa;table_time.put(new Integer(7), new JLabel(&quot;7am&quot;));&#xa;table_time.put(new Integer(8), new JLabel(&quot;8am&quot;));&#xa;table_time.put(new Integer(9), new JLabel(&quot;9am&quot;));&#xa;table_time.put(new Integer(10), new JLabel(&quot;10am&quot;));&#xa;table_time.put(new Integer(11), new JLabel(&quot;11am&quot;));&#xa;table_time.put(new Integer(12), new JLabel(&quot;12pm&quot;));&#xa;table_time.put(new Integer(13), new JLabel(&quot;1pm&quot;));&#xa;table_time.put(new Integer(14), new JLabel(&quot;2pm&quot;));&#xa;table_time.put(new Integer(15), new JLabel(&quot;3pm&quot;));&#xa;table_time.put(new Integer(16), new JLabel(&quot;4pm&quot;));&#xa;table_time.put(new Integer(17), new JLabel(&quot;5pm&quot;));&#xa;table_time.put(new Integer(18), new JLabel(&quot;6pm&quot;));&#xa;table_time.put(new Integer(19), new JLabel(&quot;7pm&quot;));&#xa;table_time.put(new Integer(20), new JLabel(&quot;8pm&quot;));&#xa;table_time.put(new Integer(21), new JLabel(&quot;9pm&quot;));&#xa;table_time.put(new Integer(22), new JLabel(&quot;10pm&quot;));&#xa;table_time.put(new Integer(23), new JLabel(&quot;11pm&quot;));&#xa;monday_slider.setLabelTable(table_time);&#xa;monday_slider.setPaintLabels(true);"/>
             <Property name="maximum" type="int" value="24"/>
             <Property name="minorTickSpacing" type="int" value="1"/>
@@ -217,11 +236,6 @@
             <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="add_employee_frame_rangeSlider1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="tuesday_label">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Tuesday"/>
-          </Properties>
-        </Component>
         <Component class="slider.RangeSlider" name="wednesday_slider">
           <Properties>
             <Property name="majorTickSpacing" type="int" value="1"/>
@@ -242,11 +256,6 @@
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="add_employee_frame_rangeSlider1"/>
           </AuxValues>
-        </Component>
-        <Component class="javax.swing.JButton" name="wednesday_label">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Wednesday"/>
-          </Properties>
         </Component>
         <Component class="slider.RangeSlider" name="thursday_slider">
           <Properties>
@@ -269,11 +278,6 @@
             <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="add_employee_frame_rangeSlider1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="thursday_label">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Thursday"/>
-          </Properties>
-        </Component>
         <Component class="slider.RangeSlider" name="friday_slider">
           <Properties>
             <Property name="majorTickSpacing" type="int" value="1"/>
@@ -294,11 +298,6 @@
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="add_employee_frame_rangeSlider1"/>
           </AuxValues>
-        </Component>
-        <Component class="javax.swing.JButton" name="friday_label">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Friday"/>
-          </Properties>
         </Component>
         <Component class="slider.RangeSlider" name="saturday_slider">
           <Properties>
@@ -353,6 +352,31 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator1">
+        </Component>
+        <Component class="javax.swing.JLabel" name="monday_label">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Monday"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="tuesday_label">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tuesday"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="wednesday_label">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Wednesday"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="thursday_label">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thursday"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="Friday">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Friday"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
