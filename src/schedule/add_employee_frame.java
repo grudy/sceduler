@@ -14,18 +14,23 @@ import javax.persistence.Persistence;
  */
 public class add_employee_frame extends javax.swing.JDialog {
 
+    
+    
+        Hashtable table_time = new Hashtable(); 
+
     /**
      * Creates new form add_employee_frame
      */
-   // ResultSet resultsfortest 
-    //Hashtable table_time = new Hashtable(); 
-    //ResultSet 
+  
+    
+    
+
     public add_employee_frame(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         
     }
-
+    
     add_employee_frame() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
    initComponents();
@@ -261,6 +266,11 @@ public class add_employee_frame extends javax.swing.JDialog {
         });
 
         saturday_label.setText("Saturday");
+        saturday_label.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saturday_labelActionPerformed(evt);
+            }
+        });
 
         sunday_slider.setMajorTickSpacing(1);
         sunday_slider.setMaximum(24);
@@ -372,10 +382,11 @@ public class add_employee_frame extends javax.swing.JDialog {
                                 .addComponent(Friday)))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(saturday_slider, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(saturday_slider, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                                .addComponent(saturday_label)))
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(saturday_label)
+                                .addGap(17, 17, 17)))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(sunday_slider, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -571,6 +582,10 @@ public class add_employee_frame extends javax.swing.JDialog {
     private void monday_sliderPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_monday_sliderPropertyChange
         // TODO add your handling code here:
     }//GEN-LAST:event_monday_sliderPropertyChange
+
+    private void saturday_labelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saturday_labelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_saturday_labelActionPerformed
 
     /**
      * @param args the command line arguments

@@ -171,10 +171,11 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="saturday_slider" alignment="1" max="32767" attributes="0"/>
+                              <Component id="saturday_slider" pref="67" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="29" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   <Component id="saturday_label" linkSize="2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
@@ -324,6 +325,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Saturday"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saturday_labelActionPerformed"/>
+          </Events>
         </Component>
         <Component class="slider.RangeSlider" name="sunday_slider">
           <Properties>
