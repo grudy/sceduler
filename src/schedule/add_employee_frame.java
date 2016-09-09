@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package schedule;
-import javax.swing.*;
 import java.util.Hashtable;
+import javax.swing.JLabel;
 /**
  *
  * @author waa
@@ -15,9 +15,19 @@ public class add_employee_frame extends javax.swing.JDialog {
     /**
      * Creates new form add_employee_frame
      */
+    
+    Hashtable table_time = new Hashtable(); 
+    
     public add_employee_frame(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        
+    }
+
+    add_employee_frame() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   initComponents();
+   
     }
 
     /**
@@ -29,69 +39,327 @@ public class add_employee_frame extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        rangeSlider1 = new slider.RangeSlider();
+        monday_label = new javax.swing.JButton();
+        monday_slider = new slider.RangeSlider();
+        tuesday_slider = new slider.RangeSlider();
+        tuesday_label = new javax.swing.JButton();
+        wednesday_slider = new slider.RangeSlider();
+        wednesday_label = new javax.swing.JButton();
+        thursday_slider = new slider.RangeSlider();
+        thursday_label = new javax.swing.JButton();
+        friday_slider = new slider.RangeSlider();
+        friday_label = new javax.swing.JButton();
+        saturday_slider = new slider.RangeSlider();
+        saturday_label = new javax.swing.JButton();
+        sunday_slider = new slider.RangeSlider();
+        sunday_label = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel2.setToolTipText("");
 
-        jButton1.setText("Monday");
+        monday_label.setText("Monday");
 
-        rangeSlider1.setMajorTickSpacing(1);
-        rangeSlider1.setMaximum(24);
-        rangeSlider1.setMinorTickSpacing(1);
-        rangeSlider1.setPaintLabels(true);
-        rangeSlider1.setPaintTicks(true);
-        rangeSlider1.setSnapToTicks(true);
-        rangeSlider1.setToolTipText("");
-        rangeSlider1.setValue(8);
-        rangeSlider1.setInheritsPopupMenu(true);
-        rangeSlider1.setUpperValue(16);
-        rangeSlider1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        monday_slider.setMajorTickSpacing(1);
+        table_time.put(new Integer(0), new JLabel("12am"));
+        table_time.put(new Integer(1), new JLabel("1am"));
+        table_time.put(new Integer(2), new JLabel("2am"));
+        table_time.put(new Integer(3), new JLabel("3am"));
+        table_time.put(new Integer(4), new JLabel("4am"));
+        table_time.put(new Integer(5), new JLabel("5am"));
+        table_time.put(new Integer(6), new JLabel("6am"));
+        table_time.put(new Integer(7), new JLabel("7am"));
+        table_time.put(new Integer(8), new JLabel("8am"));
+        table_time.put(new Integer(9), new JLabel("9am"));
+        table_time.put(new Integer(10), new JLabel("10am"));
+        table_time.put(new Integer(11), new JLabel("11am"));
+        table_time.put(new Integer(12), new JLabel("12pm"));
+        table_time.put(new Integer(13), new JLabel("1pm"));
+        table_time.put(new Integer(14), new JLabel("2pm"));
+        table_time.put(new Integer(15), new JLabel("3pm"));
+        table_time.put(new Integer(16), new JLabel("4pm"));
+        table_time.put(new Integer(17), new JLabel("5pm"));
+        table_time.put(new Integer(18), new JLabel("6pm"));
+        table_time.put(new Integer(19), new JLabel("7pm"));
+        table_time.put(new Integer(20), new JLabel("8pm"));
+        table_time.put(new Integer(21), new JLabel("9pm"));
+        table_time.put(new Integer(22), new JLabel("10pm"));
+        table_time.put(new Integer(23), new JLabel("11pm"));
+        monday_slider.setLabelTable(table_time);
+        monday_slider.setPaintLabels(true);
+        monday_slider.setMaximum(24);
+        monday_slider.setMinorTickSpacing(1);
+        monday_slider.setPaintTicks(true);
+        monday_slider.setSnapToTicks(true);
+        monday_slider.setToolTipText("");
+        monday_slider.setValue(8);
+        monday_slider.setInheritsPopupMenu(true);
+        monday_slider.setName(""); // NOI18N
+        monday_slider.setUpperValue(16);
+        monday_slider.setValueIsAdjusting(true);
+        monday_slider.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                rangeSlider1PropertyChange(evt);
+                monday_sliderPropertyChange(evt);
             }
         });
+
+        tuesday_slider.setMajorTickSpacing(1);
+        tuesday_slider.setMaximum(24);
+        tuesday_slider.setMinorTickSpacing(1);
+        table_time.put(new Integer(0), new JLabel("12am"));
+        table_time.put(new Integer(1), new JLabel("1am"));
+        table_time.put(new Integer(2), new JLabel("2am"));
+        table_time.put(new Integer(3), new JLabel("3am"));
+        table_time.put(new Integer(4), new JLabel("4am"));
+        table_time.put(new Integer(5), new JLabel("5am"));
+        table_time.put(new Integer(6), new JLabel("6am"));
+        table_time.put(new Integer(7), new JLabel("7am"));
+        table_time.put(new Integer(8), new JLabel("8am"));
+        table_time.put(new Integer(9), new JLabel("9am"));
+        table_time.put(new Integer(10), new JLabel("10am"));
+        table_time.put(new Integer(11), new JLabel("11am"));
+        table_time.put(new Integer(12), new JLabel("12pm"));
+        table_time.put(new Integer(13), new JLabel("1pm"));
+        table_time.put(new Integer(14), new JLabel("2pm"));
+        table_time.put(new Integer(15), new JLabel("3pm"));
+        table_time.put(new Integer(16), new JLabel("4pm"));
+        table_time.put(new Integer(17), new JLabel("5pm"));
+        table_time.put(new Integer(18), new JLabel("6pm"));
+        table_time.put(new Integer(19), new JLabel("7pm"));
+        table_time.put(new Integer(20), new JLabel("8pm"));
+        table_time.put(new Integer(21), new JLabel("9pm"));
+        table_time.put(new Integer(22), new JLabel("10pm"));
+        table_time.put(new Integer(23), new JLabel("11pm"));
+        tuesday_slider.setLabelTable(table_time);
+        tuesday_slider.setPaintLabels(true);
+        tuesday_slider.setPaintTicks(true);
+        tuesday_slider.setSnapToTicks(true);
+        tuesday_slider.setToolTipText("");
+        tuesday_slider.setValue(8);
+        tuesday_slider.setInheritsPopupMenu(true);
+        tuesday_slider.setName(""); // NOI18N
+        tuesday_slider.setUpperValue(16);
+        tuesday_slider.setValueIsAdjusting(true);
+        tuesday_slider.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                tuesday_sliderPropertyChange(evt);
+            }
+        });
+
+        tuesday_label.setText("Tuesday");
+
+        wednesday_slider.setMajorTickSpacing(1);
+        wednesday_slider.setMaximum(24);
+        wednesday_slider.setMinorTickSpacing(1);
+        table_time.put(new Integer(0), new JLabel("12am"));
+        table_time.put(new Integer(1), new JLabel("1am"));
+        table_time.put(new Integer(2), new JLabel("2am"));
+        table_time.put(new Integer(3), new JLabel("3am"));
+        table_time.put(new Integer(4), new JLabel("4am"));
+        table_time.put(new Integer(5), new JLabel("5am"));
+        table_time.put(new Integer(6), new JLabel("6am"));
+        table_time.put(new Integer(7), new JLabel("7am"));
+        table_time.put(new Integer(8), new JLabel("8am"));
+        table_time.put(new Integer(9), new JLabel("9am"));
+        table_time.put(new Integer(10), new JLabel("10am"));
+        table_time.put(new Integer(11), new JLabel("11am"));
+        table_time.put(new Integer(12), new JLabel("12pm"));
+        table_time.put(new Integer(13), new JLabel("1pm"));
+        table_time.put(new Integer(14), new JLabel("2pm"));
+        table_time.put(new Integer(15), new JLabel("3pm"));
+        table_time.put(new Integer(16), new JLabel("4pm"));
+        table_time.put(new Integer(17), new JLabel("5pm"));
+        table_time.put(new Integer(18), new JLabel("6pm"));
+        table_time.put(new Integer(19), new JLabel("7pm"));
+        table_time.put(new Integer(20), new JLabel("8pm"));
+        table_time.put(new Integer(21), new JLabel("9pm"));
+        table_time.put(new Integer(22), new JLabel("10pm"));
+        table_time.put(new Integer(23), new JLabel("11pm"));
+        wednesday_slider.setLabelTable(table_time);
+        wednesday_slider.setPaintLabels(true);
+        wednesday_slider.setPaintTicks(true);
+        wednesday_slider.setSnapToTicks(true);
+        wednesday_slider.setToolTipText("");
+        wednesday_slider.setValue(8);
+        wednesday_slider.setInheritsPopupMenu(true);
+        wednesday_slider.setName(""); // NOI18N
+        wednesday_slider.setUpperValue(16);
+        wednesday_slider.setValueIsAdjusting(true);
+        wednesday_slider.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                wednesday_sliderPropertyChange(evt);
+            }
+        });
+
+        wednesday_label.setText("Wednesday");
+
+        thursday_slider.setMajorTickSpacing(1);
+        thursday_slider.setMaximum(24);
+        thursday_slider.setMinorTickSpacing(1);
+        thursday_slider.setLabelTable(table_time);
+        thursday_slider.setPaintLabels(true);
+        thursday_slider.setPaintTicks(true);
+        thursday_slider.setSnapToTicks(true);
+        thursday_slider.setToolTipText("");
+        thursday_slider.setValue(8);
+        thursday_slider.setInheritsPopupMenu(true);
+        thursday_slider.setName(""); // NOI18N
+        thursday_slider.setUpperValue(16);
+        thursday_slider.setValueIsAdjusting(true);
+        thursday_slider.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                thursday_sliderPropertyChange(evt);
+            }
+        });
+
+        thursday_label.setText("Thursday");
+
+        friday_slider.setMajorTickSpacing(1);
+        friday_slider.setMaximum(24);
+        friday_slider.setLabelTable(table_time);
+        friday_slider.setPaintLabels(true);
+        friday_slider.setMinorTickSpacing(1);
+        friday_slider.setPaintTicks(true);
+        friday_slider.setSnapToTicks(true);
+        friday_slider.setToolTipText("");
+        friday_slider.setValue(8);
+        friday_slider.setInheritsPopupMenu(true);
+        friday_slider.setName(""); // NOI18N
+        friday_slider.setUpperValue(16);
+        friday_slider.setValueIsAdjusting(true);
+        friday_slider.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                friday_sliderPropertyChange(evt);
+            }
+        });
+
+        friday_label.setText("Friday");
+
+        saturday_slider.setMajorTickSpacing(1);
+        saturday_slider.setMaximum(24);
+        saturday_slider.setLabelTable(table_time);
+        saturday_slider.setPaintLabels(true);
+        saturday_slider.setMinorTickSpacing(1);
+        saturday_slider.setPaintTicks(true);
+        saturday_slider.setSnapToTicks(true);
+        saturday_slider.setToolTipText("");
+        saturday_slider.setValue(8);
+        saturday_slider.setInheritsPopupMenu(true);
+        saturday_slider.setName(""); // NOI18N
+        saturday_slider.setUpperValue(16);
+        saturday_slider.setValueIsAdjusting(true);
+        saturday_slider.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                saturday_sliderPropertyChange(evt);
+            }
+        });
+
+        saturday_label.setText("Saturday");
+
+        sunday_slider.setMajorTickSpacing(1);
+        sunday_slider.setMaximum(24);
+        sunday_slider.setMinorTickSpacing(1);
+        sunday_slider.setLabelTable(table_time);
+        sunday_slider.setPaintLabels(true);
+        sunday_slider.setPaintTicks(true);
+        sunday_slider.setSnapToTicks(true);
+        sunday_slider.setToolTipText("");
+        sunday_slider.setValue(8);
+        sunday_slider.setInheritsPopupMenu(true);
+        sunday_slider.setName(""); // NOI18N
+        sunday_slider.setUpperValue(16);
+        sunday_slider.setValueIsAdjusting(true);
+        sunday_slider.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                sunday_sliderPropertyChange(evt);
+            }
+        });
+
+        sunday_label.setText("Sunday");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1)
-                .addGap(70, 70, 70)
-                .addComponent(rangeSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                    .addComponent(tuesday_label)
+                                    .addGap(2, 2, 2))
+                                .addComponent(monday_label, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(saturday_label)
+                            .addComponent(sunday_label))
+                        .addGap(34, 34, 34))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(thursday_label)
+                            .addComponent(wednesday_label)
+                            .addComponent(friday_label))
+                        .addGap(18, 18, 18)))
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(friday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 905, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(thursday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 905, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(saturday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 905, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sunday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 905, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(wednesday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 905, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(monday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 905, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tuesday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 905, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 47, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 10, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(rangeSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(84, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(196, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(monday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(monday_label))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tuesday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tuesday_label))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addComponent(wednesday_label)
+                                .addGap(6, 6, 6))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(wednesday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(thursday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(33, 33, 33))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(thursday_label)
+                                .addGap(18, 18, 18)))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(friday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(friday_label))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(saturday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(saturday_label))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sunday_slider, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sunday_label)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jSeparator1)
+                        .addGap(6, 6, 6)))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -99,24 +367,48 @@ public class add_employee_frame extends javax.swing.JDialog {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(114, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(72, 72, 72)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(46, 46, 46))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void rangeSlider1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_rangeSlider1PropertyChange
+    private void sunday_sliderPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_sunday_sliderPropertyChange
         // TODO add your handling code here:
-    }//GEN-LAST:event_rangeSlider1PropertyChange
+    }//GEN-LAST:event_sunday_sliderPropertyChange
+
+    private void saturday_sliderPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_saturday_sliderPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_saturday_sliderPropertyChange
+
+    private void friday_sliderPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_friday_sliderPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_friday_sliderPropertyChange
+
+    private void thursday_sliderPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_thursday_sliderPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_thursday_sliderPropertyChange
+
+    private void wednesday_sliderPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_wednesday_sliderPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_wednesday_sliderPropertyChange
+
+    private void tuesday_sliderPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_tuesday_sliderPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tuesday_sliderPropertyChange
+
+    private void monday_sliderPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_monday_sliderPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_monday_sliderPropertyChange
 
     /**
      * @param args the command line arguments
@@ -161,9 +453,22 @@ public class add_employee_frame extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton friday_label;
+    private slider.RangeSlider friday_slider;
     private javax.swing.JPanel jPanel2;
-    private slider.RangeSlider rangeSlider1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JButton monday_label;
+    private slider.RangeSlider monday_slider;
+    private javax.swing.JButton saturday_label;
+    private slider.RangeSlider saturday_slider;
+    private javax.swing.JButton sunday_label;
+    private slider.RangeSlider sunday_slider;
+    private javax.swing.JButton thursday_label;
+    private slider.RangeSlider thursday_slider;
+    private javax.swing.JButton tuesday_label;
+    private slider.RangeSlider tuesday_slider;
+    private javax.swing.JButton wednesday_label;
+    private slider.RangeSlider wednesday_slider;
     // End of variables declaration//GEN-END:variables
 }

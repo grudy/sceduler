@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
   </Properties>
@@ -24,104 +28,320 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="53" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="114" max="32767" attributes="0"/>
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+              <Component id="jPanel2" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanel1">
+    <Container class="javax.swing.JPanel" name="jPanel2">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="84" max="32767" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="tuesday_label" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="monday_label" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="saturday_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="sunday_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="thursday_label" min="-2" max="-2" attributes="0"/>
+                              <Component id="wednesday_label" min="-2" max="-2" attributes="0"/>
+                              <Component id="friday_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="jSeparator1" min="-2" pref="33" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="friday_slider" min="-2" pref="905" max="-2" attributes="0"/>
+                      <Component id="thursday_slider" min="-2" pref="905" max="-2" attributes="0"/>
+                      <Component id="saturday_slider" alignment="0" min="-2" pref="905" max="-2" attributes="0"/>
+                      <Component id="sunday_slider" alignment="0" min="-2" pref="905" max="-2" attributes="0"/>
+                      <Component id="wednesday_slider" alignment="0" min="-2" pref="905" max="-2" attributes="0"/>
+                      <Component id="monday_slider" alignment="0" min="-2" pref="905" max="-2" attributes="0"/>
+                      <Component id="tuesday_slider" min="-2" pref="905" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="47" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="196" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="monday_slider" min="-2" pref="38" max="-2" attributes="0"/>
+                              <Component id="monday_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="tuesday_slider" alignment="0" min="-2" pref="38" max="-2" attributes="0"/>
+                              <Component id="tuesday_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                  <Component id="wednesday_label" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="wednesday_slider" min="-2" pref="38" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="thursday_slider" min="-2" pref="38" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="thursday_label" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="friday_slider" min="-2" pref="38" max="-2" attributes="0"/>
+                              <Component id="friday_label" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="saturday_slider" alignment="0" min="-2" pref="38" max="-2" attributes="0"/>
+                              <Component id="saturday_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="sunday_slider" alignment="0" min="-2" pref="38" max="-2" attributes="0"/>
+                              <Component id="sunday_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jSeparator1" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="11" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel2">
+        <Component class="javax.swing.JButton" name="monday_label">
           <Properties>
-            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="text" type="java.lang.String" value="Monday"/>
           </Properties>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                      <Component id="rangeSlider1" min="-2" pref="486" max="-2" attributes="0"/>
-                      <EmptySpace pref="58" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                          <Component id="rangeSlider1" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Monday"/>
-              </Properties>
-            </Component>
-            <Component class="slider.RangeSlider" name="rangeSlider1">
-              <Properties>
-                <Property name="majorTickSpacing" type="int" value="1"/>
-                <Property name="maximum" type="int" value="24"/>
-                <Property name="minorTickSpacing" type="int" value="1"/>
-                <Property name="paintLabels" type="boolean" value="true"/>
-                <Property name="paintTicks" type="boolean" value="true"/>
-                <Property name="snapToTicks" type="boolean" value="true"/>
-                <Property name="toolTipText" type="java.lang.String" value=""/>
-                <Property name="value" type="int" value="8"/>
-                <Property name="inheritsPopupMenu" type="boolean" value="true"/>
-                <Property name="upperValue" type="int" value="16"/>
-              </Properties>
-              <Events>
-                <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="rangeSlider1PropertyChange"/>
-              </Events>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="add_employee_frame_rangeSlider1"/>
-              </AuxValues>
-            </Component>
-          </SubComponents>
-        </Container>
+        </Component>
+        <Component class="slider.RangeSlider" name="monday_slider">
+          <Properties>
+            <Property name="majorTickSpacing" type="int" value="1" postCode="table_time.put(new Integer(0), new JLabel(&quot;12am&quot;));&#xa;table_time.put(new Integer(1), new JLabel(&quot;1am&quot;));&#xa;table_time.put(new Integer(2), new JLabel(&quot;2am&quot;));&#xa;table_time.put(new Integer(3), new JLabel(&quot;3am&quot;));&#xa;table_time.put(new Integer(4), new JLabel(&quot;4am&quot;));&#xa;table_time.put(new Integer(5), new JLabel(&quot;5am&quot;));&#xa;table_time.put(new Integer(6), new JLabel(&quot;6am&quot;));&#xa;table_time.put(new Integer(7), new JLabel(&quot;7am&quot;));&#xa;table_time.put(new Integer(8), new JLabel(&quot;8am&quot;));&#xa;table_time.put(new Integer(9), new JLabel(&quot;9am&quot;));&#xa;table_time.put(new Integer(10), new JLabel(&quot;10am&quot;));&#xa;table_time.put(new Integer(11), new JLabel(&quot;11am&quot;));&#xa;table_time.put(new Integer(12), new JLabel(&quot;12pm&quot;));&#xa;table_time.put(new Integer(13), new JLabel(&quot;1pm&quot;));&#xa;table_time.put(new Integer(14), new JLabel(&quot;2pm&quot;));&#xa;table_time.put(new Integer(15), new JLabel(&quot;3pm&quot;));&#xa;table_time.put(new Integer(16), new JLabel(&quot;4pm&quot;));&#xa;table_time.put(new Integer(17), new JLabel(&quot;5pm&quot;));&#xa;table_time.put(new Integer(18), new JLabel(&quot;6pm&quot;));&#xa;table_time.put(new Integer(19), new JLabel(&quot;7pm&quot;));&#xa;table_time.put(new Integer(20), new JLabel(&quot;8pm&quot;));&#xa;table_time.put(new Integer(21), new JLabel(&quot;9pm&quot;));&#xa;table_time.put(new Integer(22), new JLabel(&quot;10pm&quot;));&#xa;table_time.put(new Integer(23), new JLabel(&quot;11pm&quot;));&#xa;monday_slider.setLabelTable(table_time);&#xa;monday_slider.setPaintLabels(true);"/>
+            <Property name="maximum" type="int" value="24"/>
+            <Property name="minorTickSpacing" type="int" value="1"/>
+            <Property name="paintTicks" type="boolean" value="true"/>
+            <Property name="snapToTicks" type="boolean" value="true"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="value" type="int" value="8"/>
+            <Property name="inheritsPopupMenu" type="boolean" value="true"/>
+            <Property name="name" type="java.lang.String" value="" noResource="true"/>
+            <Property name="upperValue" type="int" value="16"/>
+            <Property name="valueIsAdjusting" type="boolean" value="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="monday_sliderPropertyChange"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="add_employee_frame_rangeSlider1"/>
+          </AuxValues>
+        </Component>
+        <Component class="slider.RangeSlider" name="tuesday_slider">
+          <Properties>
+            <Property name="majorTickSpacing" type="int" value="1"/>
+            <Property name="maximum" type="int" value="24"/>
+            <Property name="minorTickSpacing" type="int" value="1" postCode="table_time.put(new Integer(0), new JLabel(&quot;12am&quot;));&#xa;table_time.put(new Integer(1), new JLabel(&quot;1am&quot;));&#xa;table_time.put(new Integer(2), new JLabel(&quot;2am&quot;));&#xa;table_time.put(new Integer(3), new JLabel(&quot;3am&quot;));&#xa;table_time.put(new Integer(4), new JLabel(&quot;4am&quot;));&#xa;table_time.put(new Integer(5), new JLabel(&quot;5am&quot;));&#xa;table_time.put(new Integer(6), new JLabel(&quot;6am&quot;));&#xa;table_time.put(new Integer(7), new JLabel(&quot;7am&quot;));&#xa;table_time.put(new Integer(8), new JLabel(&quot;8am&quot;));&#xa;table_time.put(new Integer(9), new JLabel(&quot;9am&quot;));&#xa;table_time.put(new Integer(10), new JLabel(&quot;10am&quot;));&#xa;table_time.put(new Integer(11), new JLabel(&quot;11am&quot;));&#xa;table_time.put(new Integer(12), new JLabel(&quot;12pm&quot;));&#xa;table_time.put(new Integer(13), new JLabel(&quot;1pm&quot;));&#xa;table_time.put(new Integer(14), new JLabel(&quot;2pm&quot;));&#xa;table_time.put(new Integer(15), new JLabel(&quot;3pm&quot;));&#xa;table_time.put(new Integer(16), new JLabel(&quot;4pm&quot;));&#xa;table_time.put(new Integer(17), new JLabel(&quot;5pm&quot;));&#xa;table_time.put(new Integer(18), new JLabel(&quot;6pm&quot;));&#xa;table_time.put(new Integer(19), new JLabel(&quot;7pm&quot;));&#xa;table_time.put(new Integer(20), new JLabel(&quot;8pm&quot;));&#xa;table_time.put(new Integer(21), new JLabel(&quot;9pm&quot;));&#xa;table_time.put(new Integer(22), new JLabel(&quot;10pm&quot;));&#xa;table_time.put(new Integer(23), new JLabel(&quot;11pm&quot;));&#xa;tuesday_slider.setLabelTable(table_time);&#xa;tuesday_slider.setPaintLabels(true);"/>
+            <Property name="paintTicks" type="boolean" value="true"/>
+            <Property name="snapToTicks" type="boolean" value="true"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="value" type="int" value="8"/>
+            <Property name="inheritsPopupMenu" type="boolean" value="true"/>
+            <Property name="name" type="java.lang.String" value="" noResource="true"/>
+            <Property name="upperValue" type="int" value="16"/>
+            <Property name="valueIsAdjusting" type="boolean" value="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="tuesday_sliderPropertyChange"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="add_employee_frame_rangeSlider1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="tuesday_label">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tuesday"/>
+          </Properties>
+        </Component>
+        <Component class="slider.RangeSlider" name="wednesday_slider">
+          <Properties>
+            <Property name="majorTickSpacing" type="int" value="1"/>
+            <Property name="maximum" type="int" value="24"/>
+            <Property name="minorTickSpacing" type="int" value="1" postCode="table_time.put(new Integer(0), new JLabel(&quot;12am&quot;));&#xa;table_time.put(new Integer(1), new JLabel(&quot;1am&quot;));&#xa;table_time.put(new Integer(2), new JLabel(&quot;2am&quot;));&#xa;table_time.put(new Integer(3), new JLabel(&quot;3am&quot;));&#xa;table_time.put(new Integer(4), new JLabel(&quot;4am&quot;));&#xa;table_time.put(new Integer(5), new JLabel(&quot;5am&quot;));&#xa;table_time.put(new Integer(6), new JLabel(&quot;6am&quot;));&#xa;table_time.put(new Integer(7), new JLabel(&quot;7am&quot;));&#xa;table_time.put(new Integer(8), new JLabel(&quot;8am&quot;));&#xa;table_time.put(new Integer(9), new JLabel(&quot;9am&quot;));&#xa;table_time.put(new Integer(10), new JLabel(&quot;10am&quot;));&#xa;table_time.put(new Integer(11), new JLabel(&quot;11am&quot;));&#xa;table_time.put(new Integer(12), new JLabel(&quot;12pm&quot;));&#xa;table_time.put(new Integer(13), new JLabel(&quot;1pm&quot;));&#xa;table_time.put(new Integer(14), new JLabel(&quot;2pm&quot;));&#xa;table_time.put(new Integer(15), new JLabel(&quot;3pm&quot;));&#xa;table_time.put(new Integer(16), new JLabel(&quot;4pm&quot;));&#xa;table_time.put(new Integer(17), new JLabel(&quot;5pm&quot;));&#xa;table_time.put(new Integer(18), new JLabel(&quot;6pm&quot;));&#xa;table_time.put(new Integer(19), new JLabel(&quot;7pm&quot;));&#xa;table_time.put(new Integer(20), new JLabel(&quot;8pm&quot;));&#xa;table_time.put(new Integer(21), new JLabel(&quot;9pm&quot;));&#xa;table_time.put(new Integer(22), new JLabel(&quot;10pm&quot;));&#xa;table_time.put(new Integer(23), new JLabel(&quot;11pm&quot;));&#xa;wednesday_slider.setLabelTable(table_time);&#xa;wednesday_slider.setPaintLabels(true);"/>
+            <Property name="paintTicks" type="boolean" value="true"/>
+            <Property name="snapToTicks" type="boolean" value="true"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="value" type="int" value="8"/>
+            <Property name="inheritsPopupMenu" type="boolean" value="true"/>
+            <Property name="name" type="java.lang.String" value="" noResource="true"/>
+            <Property name="upperValue" type="int" value="16"/>
+            <Property name="valueIsAdjusting" type="boolean" value="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="wednesday_sliderPropertyChange"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="add_employee_frame_rangeSlider1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="wednesday_label">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Wednesday"/>
+          </Properties>
+        </Component>
+        <Component class="slider.RangeSlider" name="thursday_slider">
+          <Properties>
+            <Property name="majorTickSpacing" type="int" value="1"/>
+            <Property name="maximum" type="int" value="24"/>
+            <Property name="minorTickSpacing" type="int" value="1" postCode="thursday_slider.setLabelTable(table_time);&#xa;thursday_slider.setPaintLabels(true);"/>
+            <Property name="paintTicks" type="boolean" value="true"/>
+            <Property name="snapToTicks" type="boolean" value="true"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="value" type="int" value="8"/>
+            <Property name="inheritsPopupMenu" type="boolean" value="true"/>
+            <Property name="name" type="java.lang.String" value="" noResource="true"/>
+            <Property name="upperValue" type="int" value="16"/>
+            <Property name="valueIsAdjusting" type="boolean" value="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="thursday_sliderPropertyChange"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="add_employee_frame_rangeSlider1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="thursday_label">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thursday"/>
+          </Properties>
+        </Component>
+        <Component class="slider.RangeSlider" name="friday_slider">
+          <Properties>
+            <Property name="majorTickSpacing" type="int" value="1"/>
+            <Property name="maximum" type="int" value="24" postCode="friday_slider.setLabelTable(table_time);&#xa;friday_slider.setPaintLabels(true);"/>
+            <Property name="minorTickSpacing" type="int" value="1"/>
+            <Property name="paintTicks" type="boolean" value="true"/>
+            <Property name="snapToTicks" type="boolean" value="true"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="value" type="int" value="8"/>
+            <Property name="inheritsPopupMenu" type="boolean" value="true"/>
+            <Property name="name" type="java.lang.String" value="" noResource="true"/>
+            <Property name="upperValue" type="int" value="16"/>
+            <Property name="valueIsAdjusting" type="boolean" value="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="friday_sliderPropertyChange"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="add_employee_frame_rangeSlider1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="friday_label">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Friday"/>
+          </Properties>
+        </Component>
+        <Component class="slider.RangeSlider" name="saturday_slider">
+          <Properties>
+            <Property name="majorTickSpacing" type="int" value="1"/>
+            <Property name="maximum" type="int" value="24" postCode="saturday_slider.setLabelTable(table_time);&#xa;saturday_slider.setPaintLabels(true);"/>
+            <Property name="minorTickSpacing" type="int" value="1"/>
+            <Property name="paintTicks" type="boolean" value="true"/>
+            <Property name="snapToTicks" type="boolean" value="true"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="value" type="int" value="8"/>
+            <Property name="inheritsPopupMenu" type="boolean" value="true"/>
+            <Property name="name" type="java.lang.String" value="" noResource="true"/>
+            <Property name="upperValue" type="int" value="16"/>
+            <Property name="valueIsAdjusting" type="boolean" value="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="saturday_sliderPropertyChange"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="add_employee_frame_rangeSlider1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="saturday_label">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Saturday"/>
+          </Properties>
+        </Component>
+        <Component class="slider.RangeSlider" name="sunday_slider">
+          <Properties>
+            <Property name="majorTickSpacing" type="int" value="1"/>
+            <Property name="maximum" type="int" value="24"/>
+            <Property name="minorTickSpacing" type="int" value="1" postCode="sunday_slider.setLabelTable(table_time);&#xa;sunday_slider.setPaintLabels(true);"/>
+            <Property name="paintTicks" type="boolean" value="true"/>
+            <Property name="snapToTicks" type="boolean" value="true"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="value" type="int" value="8"/>
+            <Property name="inheritsPopupMenu" type="boolean" value="true"/>
+            <Property name="name" type="java.lang.String" value="" noResource="true"/>
+            <Property name="upperValue" type="int" value="16"/>
+            <Property name="valueIsAdjusting" type="boolean" value="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="sunday_sliderPropertyChange"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="add_employee_frame_rangeSlider1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="sunday_label">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Sunday"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="jSeparator1">
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
