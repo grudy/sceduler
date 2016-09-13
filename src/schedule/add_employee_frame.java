@@ -546,7 +546,12 @@ public class add_employee_frame extends javax.swing.JDialog {
             Main refresher = new Main();
             if(monday_slider.getValue() - monday_slider.getUpperValue() > 0)
             {
+                en1.setMondayStart(monday_slider.getValue() );
+                en1.setMondayFinish(monday_slider.getValue() );
+                en1.setTuesdayStart(tuesday_slider.getValue() );
+                en1.setTuesdayFinish(tuesday_slider.getValue() );
                 
+
             }   
             refresher.setVisible(true);
             this.setVisible(false);

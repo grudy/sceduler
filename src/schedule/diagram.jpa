@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" pkg="schedule" v="2.5" sm="false" xs="false" id="_14736074682011" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity xre="false" compositePrimaryKeyClass="EmployeesPK" abs="false" class="Employees" visibile="true" minimized="false" rootElement="_14736074682011" id="_14736074682222">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="String" visibile="true" name="firstName" id="_14736074682244">
+                <jpa:bv/>
+                <jpa:column name="FIRST_NAME" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="String" visibile="true" name="lastName" id="_14736074682255">
+                <jpa:bv/>
+                <jpa:column name="LAST_NAME" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="employeeName" id="_14736074682256">
+                <jpa:bv/>
+                <jpa:column name="EMPLOYEE_NAME" unique="false" nullable="true" insertable="true" updatable="true" length="255"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="password" id="_14736074682257">
+                <jpa:bv/>
+                <jpa:column name="PASSWORD" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:lob/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" visibile="true" name="email" id="_14736074682258">
+                <jpa:bv/>
+                <jpa:column name="EMAIL" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:lob/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="mondayStart" id="_14736074682259">
+                <jpa:bv/>
+                <jpa:column name="MONDAY_START" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="mondayFinish" id="_147360746822510">
+                <jpa:bv/>
+                <jpa:column name="MONDAY_FINISH" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="tuesdayStart" id="_147360746822511">
+                <jpa:bv/>
+                <jpa:column name="TUESDAY_START" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="tuesdayFinish" id="_147360746822512">
+                <jpa:bv/>
+                <jpa:column name="TUESDAY_FINISH" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="wednesdayStart" id="_147360746822613">
+                <jpa:bv/>
+                <jpa:column name="WEDNESDAY_START" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="wednesdayFinish" id="_147360746822614">
+                <jpa:bv/>
+                <jpa:column name="WEDNESDAY_FINISH" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="thursdayStart" id="_147360746822615">
+                <jpa:bv/>
+                <jpa:column name="THURSDAY_START" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="thursdayFinish" id="_147360746822616">
+                <jpa:bv/>
+                <jpa:column name="THURSDAY_FINISH" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="fridayStart" id="_147360746822617">
+                <jpa:bv/>
+                <jpa:column name="FRIDAY_START" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="fridayFinish" id="_147360746822618">
+                <jpa:bv/>
+                <jpa:column name="FRIDAY_FINISH" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="saturdayStart" id="_147360746822619">
+                <jpa:bv/>
+                <jpa:column name="SATURDAY_START" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="saturdayFinish" id="_147360746822620">
+                <jpa:bv/>
+                <jpa:column name="SATURDAY_FINISH" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="sundayStart" id="_147360746822621">
+                <jpa:bv/>
+                <jpa:column name="SUNDAY_START" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Integer" visibile="true" name="sundayFinish" id="_147360746822622">
+                <jpa:bv/>
+                <jpa:column name="SUNDAY_FINISH" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:id attribute-type="Integer" visibile="true" name="id" id="_14736074682233">
+                <jpa:bv/>
+                <jpa:column name="ID" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:generated-value strategy="IDENTITY"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="true" name="Employees.findAll">
+            <jpa:query>SELECT e FROM Employees e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Employees.findById">
+            <jpa:query>SELECT e FROM Employees e WHERE e.id = :id</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Employees.findByFirstName">
+            <jpa:query>SELECT e FROM Employees e WHERE e.firstName = :firstName</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Employees.findByLastName">
+            <jpa:query>SELECT e FROM Employees e WHERE e.lastName = :lastName</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Employees.findByEmployeeName">
+            <jpa:query>SELECT e FROM Employees e WHERE e.employeeName = :employeeName</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Employees.findByMondayStart">
+            <jpa:query>SELECT e FROM Employees e WHERE e.mondayStart = :mondayStart</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Employees.findByMondayFinish">
+            <jpa:query>SELECT e FROM Employees e WHERE e.mondayFinish = :mondayFinish</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Employees.findByTuesdayStart">
+            <jpa:query>SELECT e FROM Employees e WHERE e.tuesdayStart = :tuesdayStart</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Employees.findByTuesdayFinish">
+            <jpa:query>SELECT e FROM Employees e WHERE e.tuesdayFinish = :tuesdayFinish</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Employees.findByWednesdayStart">
+            <jpa:query>SELECT e FROM Employees e WHERE e.wednesdayStart = :wednesdayStart</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Employees.findByWednesdayFinish">
+            <jpa:query>SELECT e FROM Employees e WHERE e.wednesdayFinish = :wednesdayFinish</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Employees.findByThursdayStart">
+            <jpa:query>SELECT e FROM Employees e WHERE e.thursdayStart = :thursdayStart</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Employees.findByThursdayFinish">
+            <jpa:query>SELECT e FROM Employees e WHERE e.thursdayFinish = :thursdayFinish</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Employees.findByFridayStart">
+            <jpa:query>SELECT e FROM Employees e WHERE e.fridayStart = :fridayStart</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Employees.findByFridayFinish">
+            <jpa:query>SELECT e FROM Employees e WHERE e.fridayFinish = :fridayFinish</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Employees.findBySaturdayStart">
+            <jpa:query>SELECT e FROM Employees e WHERE e.saturdayStart = :saturdayStart</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Employees.findBySaturdayFinish">
+            <jpa:query>SELECT e FROM Employees e WHERE e.saturdayFinish = :saturdayFinish</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Employees.findBySundayStart">
+            <jpa:query>SELECT e FROM Employees e WHERE e.sundayStart = :sundayStart</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="Employees.findBySundayFinish">
+            <jpa:query>SELECT e FROM Employees e WHERE e.sundayFinish = :sundayFinish</jpa:query>
+        </jpa:nq>
+        <jpa:table name="EMPLOYEES"/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="Entity_1PK" abs="false" class="Entity_1" visibile="true" minimized="false" rootElement="_14736074682011" id="_1473620200145">
+        <jpa:attributes>
+            <jpa:id attribute-type="Long" visibile="true" name="id" id="_14736202001462">
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Entity_1.findAll">
+            <jpa:query>Select e from Entity_1 e</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:snp e="true" loc="BEFORE_PACKAGE">/**
+ * This file was generated by the JPA Modeler
+ */</jpa:snp>
+    <jpa:c/>
+    <jpa:diagram>
+        <plane elementRef="_14736074682011">
+            <shape elementRef="_14736074682222">
+                <Bounds x="32.0" y="32.0" width="163.0" height="448.0"/>
+            </shape>
+            <shape elementRef="_1473620200145">
+                <Bounds x="445.0" y="217.0" width="146.0" height="55.0"/>
+            </shape>
+        </plane>
+    </jpa:diagram>
+</jpa:entity-mappings>
