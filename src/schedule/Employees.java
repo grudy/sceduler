@@ -3,6 +3,8 @@
  */
 package schedule;
 
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -14,6 +16,7 @@ import javax.persistence.Lob;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 /**
  * @author waa
@@ -41,6 +44,9 @@ import javax.persistence.Table;
     @NamedQuery(name = "Employees.findBySundayStart", query = "SELECT e FROM Employees e WHERE e.sundayStart = :sundayStart"),
     @NamedQuery(name = "Employees.findBySundayFinish", query = "SELECT e FROM Employees e WHERE e.sundayFinish = :sundayFinish")})
 public class Employees implements Serializable {
+
+    @Transient
+    private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
 
     @Column(name = "ID")
     @Id
@@ -130,7 +136,9 @@ public class Employees implements Serializable {
     }
 
     public void setId(Integer id) {
+        Integer oldId = this.id;
         this.id = id;
+        changeSupport.firePropertyChange("id", oldId, id);
     }
 
     public String getFirstName() {
@@ -138,7 +146,9 @@ public class Employees implements Serializable {
     }
 
     public void setFirstName(String firstName) {
+        String oldFirstName = this.firstName;
         this.firstName = firstName;
+        changeSupport.firePropertyChange("firstName", oldFirstName, firstName);
     }
 
     public String getLastName() {
@@ -146,7 +156,9 @@ public class Employees implements Serializable {
     }
 
     public void setLastName(String lastName) {
+        String oldLastName = this.lastName;
         this.lastName = lastName;
+        changeSupport.firePropertyChange("lastName", oldLastName, lastName);
     }
 
     public String getEmployeeName() {
@@ -154,7 +166,9 @@ public class Employees implements Serializable {
     }
 
     public void setEmployeeName(String employeeName) {
+        String oldEmployeeName = this.employeeName;
         this.employeeName = employeeName;
+        changeSupport.firePropertyChange("employeeName", oldEmployeeName, employeeName);
     }
 
     public String getPassword() {
@@ -162,7 +176,9 @@ public class Employees implements Serializable {
     }
 
     public void setPassword(String password) {
+        String oldPassword = this.password;
         this.password = password;
+        changeSupport.firePropertyChange("password", oldPassword, password);
     }
 
     public String getEmail() {
@@ -170,7 +186,9 @@ public class Employees implements Serializable {
     }
 
     public void setEmail(String email) {
+        String oldEmail = this.email;
         this.email = email;
+        changeSupport.firePropertyChange("email", oldEmail, email);
     }
 
     public Integer getMondayStart() {
@@ -178,7 +196,9 @@ public class Employees implements Serializable {
     }
 
     public void setMondayStart(Integer mondayStart) {
+        Integer oldMondayStart = this.mondayStart;
         this.mondayStart = mondayStart;
+        changeSupport.firePropertyChange("mondayStart", oldMondayStart, mondayStart);
     }
 
     public Integer getMondayFinish() {
@@ -186,7 +206,9 @@ public class Employees implements Serializable {
     }
 
     public void setMondayFinish(Integer mondayFinish) {
+        Integer oldMondayFinish = this.mondayFinish;
         this.mondayFinish = mondayFinish;
+        changeSupport.firePropertyChange("mondayFinish", oldMondayFinish, mondayFinish);
     }
 
     public Integer getTuesdayStart() {
@@ -194,7 +216,9 @@ public class Employees implements Serializable {
     }
 
     public void setTuesdayStart(Integer tuesdayStart) {
+        Integer oldTuesdayStart = this.tuesdayStart;
         this.tuesdayStart = tuesdayStart;
+        changeSupport.firePropertyChange("tuesdayStart", oldTuesdayStart, tuesdayStart);
     }
 
     public Integer getTuesdayFinish() {
@@ -202,7 +226,9 @@ public class Employees implements Serializable {
     }
 
     public void setTuesdayFinish(Integer tuesdayFinish) {
+        Integer oldTuesdayFinish = this.tuesdayFinish;
         this.tuesdayFinish = tuesdayFinish;
+        changeSupport.firePropertyChange("tuesdayFinish", oldTuesdayFinish, tuesdayFinish);
     }
 
     public Integer getWednesdayStart() {
@@ -210,7 +236,9 @@ public class Employees implements Serializable {
     }
 
     public void setWednesdayStart(Integer wednesdayStart) {
+        Integer oldWednesdayStart = this.wednesdayStart;
         this.wednesdayStart = wednesdayStart;
+        changeSupport.firePropertyChange("wednesdayStart", oldWednesdayStart, wednesdayStart);
     }
 
     public Integer getWednesdayFinish() {
@@ -218,7 +246,9 @@ public class Employees implements Serializable {
     }
 
     public void setWednesdayFinish(Integer wednesdayFinish) {
+        Integer oldWednesdayFinish = this.wednesdayFinish;
         this.wednesdayFinish = wednesdayFinish;
+        changeSupport.firePropertyChange("wednesdayFinish", oldWednesdayFinish, wednesdayFinish);
     }
 
     public Integer getThursdayStart() {
@@ -226,7 +256,9 @@ public class Employees implements Serializable {
     }
 
     public void setThursdayStart(Integer thursdayStart) {
+        Integer oldThursdayStart = this.thursdayStart;
         this.thursdayStart = thursdayStart;
+        changeSupport.firePropertyChange("thursdayStart", oldThursdayStart, thursdayStart);
     }
 
     public Integer getThursdayFinish() {
@@ -234,7 +266,9 @@ public class Employees implements Serializable {
     }
 
     public void setThursdayFinish(Integer thursdayFinish) {
+        Integer oldThursdayFinish = this.thursdayFinish;
         this.thursdayFinish = thursdayFinish;
+        changeSupport.firePropertyChange("thursdayFinish", oldThursdayFinish, thursdayFinish);
     }
 
     public Integer getFridayStart() {
@@ -242,7 +276,9 @@ public class Employees implements Serializable {
     }
 
     public void setFridayStart(Integer fridayStart) {
+        Integer oldFridayStart = this.fridayStart;
         this.fridayStart = fridayStart;
+        changeSupport.firePropertyChange("fridayStart", oldFridayStart, fridayStart);
     }
 
     public Integer getFridayFinish() {
@@ -250,7 +286,9 @@ public class Employees implements Serializable {
     }
 
     public void setFridayFinish(Integer fridayFinish) {
+        Integer oldFridayFinish = this.fridayFinish;
         this.fridayFinish = fridayFinish;
+        changeSupport.firePropertyChange("fridayFinish", oldFridayFinish, fridayFinish);
     }
 
     public Integer getSaturdayStart() {
@@ -258,7 +296,9 @@ public class Employees implements Serializable {
     }
 
     public void setSaturdayStart(Integer saturdayStart) {
+        Integer oldSaturdayStart = this.saturdayStart;
         this.saturdayStart = saturdayStart;
+        changeSupport.firePropertyChange("saturdayStart", oldSaturdayStart, saturdayStart);
     }
 
     public Integer getSaturdayFinish() {
@@ -266,7 +306,9 @@ public class Employees implements Serializable {
     }
 
     public void setSaturdayFinish(Integer saturdayFinish) {
+        Integer oldSaturdayFinish = this.saturdayFinish;
         this.saturdayFinish = saturdayFinish;
+        changeSupport.firePropertyChange("saturdayFinish", oldSaturdayFinish, saturdayFinish);
     }
 
     public Integer getSundayStart() {
@@ -274,7 +316,9 @@ public class Employees implements Serializable {
     }
 
     public void setSundayStart(Integer sundayStart) {
+        Integer oldSundayStart = this.sundayStart;
         this.sundayStart = sundayStart;
+        changeSupport.firePropertyChange("sundayStart", oldSundayStart, sundayStart);
     }
 
     public Integer getSundayFinish() {
@@ -282,7 +326,17 @@ public class Employees implements Serializable {
     }
 
     public void setSundayFinish(Integer sundayFinish) {
+        Integer oldSundayFinish = this.sundayFinish;
         this.sundayFinish = sundayFinish;
+        changeSupport.firePropertyChange("sundayFinish", oldSundayFinish, sundayFinish);
+    }
+
+    public void addPropertyChangeListener(PropertyChangeListener listener) {
+        changeSupport.addPropertyChangeListener(listener);
+    }
+
+    public void removePropertyChangeListener(PropertyChangeListener listener) {
+        changeSupport.removePropertyChangeListener(listener);
     }
 
 }

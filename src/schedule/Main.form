@@ -179,6 +179,42 @@
         <Property name="useNullLayout" type="boolean" value="true"/>
       </Layout>
     </Container>
+    <Component class="javax.persistence.Query" name="employeesQuery8">
+      <Properties>
+        <Property name="query" type="java.lang.String" value="SELECT e FROM Employees e"/>
+        <Property name="entityManager" type="java.lang.Object" editor="org.netbeans.modules.form.j2ee.J2EEPropertyModifier$EMProperty$EntityManagerEditor">
+          <ComponentRef name="schedulePUEntityManager"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="java.util.List" name="employeesList8">
+      <Properties>
+        <Property name="query" type="java.lang.Object" editor="org.netbeans.modules.form.j2ee.J2EEPropertyModifier$QueryBeanProperty$QueryEditor">
+          <ComponentRef name="employeesQuery8"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;schedule.Employees&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.persistence.Query" name="employeesQuery9">
+      <Properties>
+        <Property name="query" type="java.lang.String" value="SELECT e FROM Employees e"/>
+        <Property name="entityManager" type="java.lang.Object" editor="org.netbeans.modules.form.j2ee.J2EEPropertyModifier$EMProperty$EntityManagerEditor">
+          <ComponentRef name="schedulePUEntityManager"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="java.util.List" name="employeesList9">
+      <Properties>
+        <Property name="query" type="java.lang.Object" editor="org.netbeans.modules.form.j2ee.J2EEPropertyModifier$QueryBeanProperty$QueryEditor">
+          <ComponentRef name="employeesQuery9"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;schedule.Employees&gt;"/>
+      </AuxValues>
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -210,16 +246,27 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="week_tab" min="-2" pref="527" max="-2" attributes="0"/>
-              <EmptySpace pref="330" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="137" max="-2" attributes="0"/>
+              <EmptySpace pref="147" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace pref="148" max="32767" attributes="0"/>
-              <Component id="week_tab" min="-2" pref="329" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace pref="195" max="32767" attributes="0"/>
+                      <Component id="week_tab" min="-2" pref="329" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
           </Group>
@@ -279,18 +326,15 @@
                 </Property>
               </Properties>
               <BindingProperties>
-                <BindingProperty name="elements" source="employeesList" target="monday_table" targetPath="elements" updateStrategy="0" immediately="true">
+                <BindingProperty name="elements" source="employeesList8" target="monday_table" targetPath="elements" updateStrategy="0" immediately="true">
                   <Subbinding sourcePath="${employeeName}">
-                    <BindingParameter name="NAME" value="Employee Name"/>
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
                   </Subbinding>
                   <Subbinding sourcePath="${mondayStart}">
-                    <BindingParameter name="NAME" value="Monday Start"/>
-                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
                   </Subbinding>
                   <Subbinding sourcePath="${mondayFinish}">
-                    <BindingParameter name="NAME" value="Monday Finish"/>
-                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
                   </Subbinding>
                 </BindingProperty>
               </BindingProperties>
@@ -337,18 +381,15 @@
                 </Property>
               </Properties>
               <BindingProperties>
-                <BindingProperty name="elements" source="employeesList" target="tuesday_table" targetPath="elements" updateStrategy="0" immediately="true">
+                <BindingProperty name="elements" source="employeesList8" target="tuesday_table" targetPath="elements" updateStrategy="0" immediately="true">
                   <Subbinding sourcePath="${employeeName}">
-                    <BindingParameter name="NAME" value="Employee Name"/>
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
                   </Subbinding>
                   <Subbinding sourcePath="${tuesdayStart}">
-                    <BindingParameter name="NAME" value="Tuesday Start"/>
-                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
                   </Subbinding>
                   <Subbinding sourcePath="${tuesdayFinish}">
-                    <BindingParameter name="NAME" value="Tuesday Finish"/>
-                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
                   </Subbinding>
                 </BindingProperty>
               </BindingProperties>
@@ -379,15 +420,15 @@
                 </Property>
               </Properties>
               <BindingProperties>
-                <BindingProperty name="elements" source="employeesList2" target="wednesday_table" targetPath="elements" updateStrategy="0" immediately="true">
+                <BindingProperty name="elements" source="employeesList8" target="wednesday_table" targetPath="elements" updateStrategy="0" immediately="true">
                   <Subbinding sourcePath="${employeeName}">
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
                   </Subbinding>
                   <Subbinding sourcePath="${wednesdayStart}">
-                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
                   </Subbinding>
                   <Subbinding sourcePath="${wednesdayFinish}">
-                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
                   </Subbinding>
                 </BindingProperty>
               </BindingProperties>
@@ -434,18 +475,15 @@
                 </Property>
               </Properties>
               <BindingProperties>
-                <BindingProperty name="elements" source="employeesList" target="thursday_table" targetPath="elements" updateStrategy="0" immediately="true">
+                <BindingProperty name="elements" source="employeesList8" target="thursday_table" targetPath="elements" updateStrategy="0" immediately="true">
                   <Subbinding sourcePath="${employeeName}">
-                    <BindingParameter name="NAME" value="Employee Name"/>
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
                   </Subbinding>
                   <Subbinding sourcePath="${thursdayStart}">
-                    <BindingParameter name="NAME" value="Thursday Start"/>
-                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
                   </Subbinding>
                   <Subbinding sourcePath="${thursdayFinish}">
-                    <BindingParameter name="NAME" value="Thursday Finish"/>
-                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
                   </Subbinding>
                 </BindingProperty>
               </BindingProperties>
@@ -492,18 +530,15 @@
                 </Property>
               </Properties>
               <BindingProperties>
-                <BindingProperty name="elements" source="employeesList" target="friday_table" targetPath="elements" updateStrategy="0" immediately="true">
+                <BindingProperty name="elements" source="employeesList8" target="friday_table" targetPath="elements" updateStrategy="0" immediately="true">
                   <Subbinding sourcePath="${employeeName}">
-                    <BindingParameter name="NAME" value="Employee Name"/>
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
                   </Subbinding>
                   <Subbinding sourcePath="${fridayStart}">
-                    <BindingParameter name="NAME" value="Friday Start"/>
-                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
                   </Subbinding>
                   <Subbinding sourcePath="${fridayFinish}">
-                    <BindingParameter name="NAME" value="Friday Finish"/>
-                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
                   </Subbinding>
                 </BindingProperty>
               </BindingProperties>
@@ -550,18 +585,15 @@
                 </Property>
               </Properties>
               <BindingProperties>
-                <BindingProperty name="elements" source="employeesList" target="saturday_table" targetPath="elements" updateStrategy="0" immediately="true">
+                <BindingProperty name="elements" source="employeesList8" target="saturday_table" targetPath="elements" updateStrategy="0" immediately="true">
                   <Subbinding sourcePath="${employeeName}">
-                    <BindingParameter name="NAME" value="Employee Name"/>
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
                   </Subbinding>
                   <Subbinding sourcePath="${saturdayStart}">
-                    <BindingParameter name="NAME" value="Saturday Start"/>
-                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
                   </Subbinding>
                   <Subbinding sourcePath="${saturdayFinish}">
-                    <BindingParameter name="NAME" value="Saturday Finish"/>
-                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
                   </Subbinding>
                 </BindingProperty>
               </BindingProperties>
@@ -608,49 +640,53 @@
                 </Property>
               </Properties>
               <BindingProperties>
-                <BindingProperty name="elements" source="employeesList" target="sunday_table" targetPath="elements" updateStrategy="0" immediately="true">
+                <BindingProperty name="elements" source="employeesList8" target="sunday_table" targetPath="elements" updateStrategy="0" immediately="true">
                   <Subbinding sourcePath="${employeeName}">
-                    <BindingParameter name="NAME" value="Employee Name"/>
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
                   </Subbinding>
                   <Subbinding sourcePath="${sundayStart}">
-                    <BindingParameter name="NAME" value="Sunday Start"/>
-                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
                   </Subbinding>
                   <Subbinding sourcePath="${sundayFinish}">
-                    <BindingParameter name="NAME" value="Sunday Finish"/>
-                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                    <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
                   </Subbinding>
                 </BindingProperty>
               </BindingProperties>
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JInternalFrame" name="jInternalFrame1">
-          <Properties>
-            <Property name="visible" type="boolean" value="true"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="tab8">
-                <Property name="tabTitle" type="java.lang.String" value="tab8"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
 
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-        </Container>
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="org.jdesktop.swingx.JXTable" name="jXTable1">
+          <Properties>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+          <BindingProperties>
+            <BindingProperty name="elements" source="employeesList8" target="jXTable1" targetPath="elements" updateStrategy="0" immediately="true">
+              <Subbinding sourcePath="${employeeName}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+              </Subbinding>
+            </BindingProperty>
+          </BindingProperties>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>

@@ -251,7 +251,6 @@ public class add_employee_frame extends javax.swing.JDialog {
         saturday_slider.setLabelTable(table_time);
         saturday_slider.setPaintLabels(true);
         saturday_slider.setMinorTickSpacing(1);
-        saturday_slider.setPaintTicks(true);
         saturday_slider.setSnapToTicks(true);
         saturday_slider.setToolTipText("");
         saturday_slider.setValue(8);
@@ -539,20 +538,68 @@ public class add_employee_frame extends javax.swing.JDialog {
             en1.setFirstName(first_name_input.getText());
             en1.setLastName(last_name_input.getText());
             en1.setEmployeeName(first_name_input.getText()  + " " + last_name_input.getText());
+            
+            if(monday_slider.getUpperValue() - monday_slider.getValue() > 0)
+            {
+                en1.setMondayStart(monday_slider.getValue() );
+                en1.setMondayFinish(monday_slider.getUpperValue() );
+               
+
+            }   
+            if(tuesday_slider.getUpperValue() - tuesday_slider.getValue() > 0)
+            {
+                en1.setTuesdayStart(tuesday_slider.getValue() );
+                en1.setTuesdayFinish(tuesday_slider.getUpperValue() );
+
+
+            }
+
+            if(wednesday_slider.getUpperValue() - wednesday_slider.getValue() > 0)
+            {
+                en1.setWednesdayStart(wednesday_slider.getValue() );
+                en1.setWednesdayFinish(wednesday_slider.getUpperValue() );
+
+
+            }
+            if(thursday_slider.getUpperValue() - thursday_slider.getValue() > 0)
+            {
+                en1.setThursdayStart(thursday_slider.getValue() );
+                en1.setThursdayFinish(thursday_slider.getUpperValue() );
+
+
+            }
+
+            if(friday_slider.getUpperValue() - friday_slider.getValue() > 0)
+            {
+                en1.setFridayStart(friday_slider.getValue() );
+                en1.setFridayFinish(friday_slider.getUpperValue() );
+
+
+            }
+
+            if(saturday_slider.getUpperValue() - saturday_slider.getValue() > 0)
+            {
+                en1.setSaturdayStart(saturday_slider.getValue() );
+                en1.setSaturdayFinish(saturday_slider.getUpperValue() );
+
+
+            }
+
+            if(sunday_slider.getUpperValue() - sunday_slider.getValue() > 0)
+            {
+                en1.setSundayStart(tuesday_slider.getValue() );
+                en1.setSundayFinish(sunday_slider.getUpperValue() );
+
+
+            } 
+            
+            
              EntityManagerFactory creator = Persistence.createEntityManagerFactory("schedulePU");
             EmployeesJpaController called = new EmployeesJpaController(creator);
             called.create(en1);
             //.executeUpdate();
             Main refresher = new Main();
-            if(monday_slider.getValue() - monday_slider.getUpperValue() > 0)
-            {
-                en1.setMondayStart(monday_slider.getValue() );
-                en1.setMondayFinish(monday_slider.getValue() );
-                en1.setTuesdayStart(tuesday_slider.getValue() );
-                en1.setTuesdayFinish(tuesday_slider.getValue() );
-                
-
-            }   
+            		
             refresher.setVisible(true);
             this.setVisible(false);
            // main a = new main();

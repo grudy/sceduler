@@ -48,6 +48,10 @@ public class Main extends javax.swing.JFrame {
         employeesList7 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : employeesQuery7.getResultList();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
+        employeesQuery8 = java.beans.Beans.isDesignTime() ? null : schedulePUEntityManager.createQuery("SELECT e FROM Employees e");
+        employeesList8 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : employeesQuery8.getResultList();
+        employeesQuery9 = java.beans.Beans.isDesignTime() ? null : schedulePUEntityManager.createQuery("SELECT e FROM Employees e");
+        employeesList9 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : employeesQuery9.getResultList();
         jButton1 = new javax.swing.JButton();
         week_tab = new javax.swing.JTabbedPane();
         monday_pane = new javax.swing.JScrollPane();
@@ -64,7 +68,8 @@ public class Main extends javax.swing.JFrame {
         saturday_table = new javax.swing.JTable();
         sunday_pane = new javax.swing.JScrollPane();
         sunday_table = new javax.swing.JTable();
-        jInternalFrame1 = new javax.swing.JInternalFrame();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jXTable1 = new org.jdesktop.swingx.JXTable();
 
         jMenu1.setText("jMenu1");
 
@@ -79,132 +84,125 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList, monday_table);
+        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList8, monday_table);
         org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${employeeName}"));
         columnBinding.setColumnName("Employee Name");
         columnBinding.setColumnClass(String.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${mondayStart}"));
         columnBinding.setColumnName("Monday Start");
-        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setColumnClass(Integer.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${mondayFinish}"));
         columnBinding.setColumnName("Monday Finish");
-        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setColumnClass(Integer.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         monday_pane.setViewportView(monday_table);
 
         week_tab.addTab("Monday", monday_pane);
 
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList, tuesday_table);
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList8, tuesday_table);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${employeeName}"));
         columnBinding.setColumnName("Employee Name");
         columnBinding.setColumnClass(String.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${tuesdayStart}"));
         columnBinding.setColumnName("Tuesday Start");
-        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setColumnClass(Integer.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${tuesdayFinish}"));
         columnBinding.setColumnName("Tuesday Finish");
-        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setColumnClass(Integer.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         tuesday_pane.setViewportView(tuesday_table);
 
         week_tab.addTab("Tuesday", tuesday_pane);
 
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList2, wednesday_table);
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList8, wednesday_table);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${employeeName}"));
         columnBinding.setColumnName("Employee Name");
         columnBinding.setColumnClass(String.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${wednesdayStart}"));
         columnBinding.setColumnName("Wednesday Start");
-        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setColumnClass(Integer.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${wednesdayFinish}"));
         columnBinding.setColumnName("Wednesday Finish");
-        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setColumnClass(Integer.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         wednesday_pane.setViewportView(wednesday_table);
 
         week_tab.addTab("Wednesday", wednesday_pane);
 
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList, thursday_table);
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList8, thursday_table);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${employeeName}"));
         columnBinding.setColumnName("Employee Name");
         columnBinding.setColumnClass(String.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${thursdayStart}"));
         columnBinding.setColumnName("Thursday Start");
-        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setColumnClass(Integer.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${thursdayFinish}"));
         columnBinding.setColumnName("Thursday Finish");
-        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setColumnClass(Integer.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         thursday_pane.setViewportView(thursday_table);
 
         week_tab.addTab("Thursday", thursday_pane);
 
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList, friday_table);
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList8, friday_table);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${employeeName}"));
         columnBinding.setColumnName("Employee Name");
         columnBinding.setColumnClass(String.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${fridayStart}"));
         columnBinding.setColumnName("Friday Start");
-        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setColumnClass(Integer.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${fridayFinish}"));
         columnBinding.setColumnName("Friday Finish");
-        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setColumnClass(Integer.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         friday_pane.setViewportView(friday_table);
 
         week_tab.addTab("Friday", friday_pane);
 
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList, saturday_table);
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList8, saturday_table);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${employeeName}"));
         columnBinding.setColumnName("Employee Name");
         columnBinding.setColumnClass(String.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${saturdayStart}"));
         columnBinding.setColumnName("Saturday Start");
-        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setColumnClass(Integer.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${saturdayFinish}"));
         columnBinding.setColumnName("Saturday Finish");
-        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setColumnClass(Integer.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         saturday_pane.setViewportView(saturday_table);
 
         week_tab.addTab("Saturday", saturday_pane);
 
-        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList, sunday_table);
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList8, sunday_table);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${employeeName}"));
         columnBinding.setColumnName("Employee Name");
         columnBinding.setColumnClass(String.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${sundayStart}"));
         columnBinding.setColumnName("Sunday Start");
-        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setColumnClass(Integer.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${sundayFinish}"));
         columnBinding.setColumnName("Sunday Finish");
-        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setColumnClass(Integer.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         sunday_pane.setViewportView(sunday_table);
 
         week_tab.addTab("Sunday", sunday_pane);
 
-        jInternalFrame1.setVisible(true);
-
-        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
-        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
-        jInternalFrame1Layout.setHorizontalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jInternalFrame1Layout.setVerticalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        week_tab.addTab("tab8", jInternalFrame1);
+        jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, employeesList8, jXTable1);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${employeeName}"));
+        columnBinding.setColumnName("Employee Name");
+        columnBinding.setColumnClass(String.class);
+        bindingGroup.addBinding(jTableBinding);
+        jTableBinding.bind();
+        jScrollPane1.setViewportView(jXTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -217,14 +215,22 @@ public class Main extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(week_tab, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(330, Short.MAX_VALUE))
+                .addGap(44, 44, 44)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(147, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(148, Short.MAX_VALUE)
-                .addComponent(week_tab, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(195, Short.MAX_VALUE)
+                        .addComponent(week_tab, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(36, 36, 36))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(172, 172, 172)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jButton1)
                 .addGap(39, 39, 39))
         );
@@ -285,6 +291,8 @@ public class Main extends javax.swing.JFrame {
     private java.util.List<schedule.Employees> employeesList5;
     private java.util.List<schedule.Employees> employeesList6;
     private java.util.List<schedule.Employees> employeesList7;
+    private java.util.List<schedule.Employees> employeesList8;
+    private java.util.List<schedule.Employees> employeesList9;
     private javax.persistence.Query employeesQuery;
     private javax.persistence.Query employeesQuery1;
     private javax.persistence.Query employeesQuery2;
@@ -293,13 +301,16 @@ public class Main extends javax.swing.JFrame {
     private javax.persistence.Query employeesQuery5;
     private javax.persistence.Query employeesQuery6;
     private javax.persistence.Query employeesQuery7;
+    private javax.persistence.Query employeesQuery8;
+    private javax.persistence.Query employeesQuery9;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JScrollPane friday_pane;
     private javax.swing.JTable friday_table;
     private javax.swing.JButton jButton1;
-    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private org.jdesktop.swingx.JXTable jXTable1;
     private javax.swing.JScrollPane monday_pane;
     private javax.swing.JTable monday_table;
     private javax.swing.JScrollPane saturday_pane;
