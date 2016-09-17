@@ -21,5 +21,5 @@ Works with a derby sql database.
 
 Planned features include printouts, login screen, and working on a calendar
 
-[image 1 missing](images/scheduler_picture_1.png)
-[image 2 missing](images/scheduler_picture_2.png)
+[image 1 ](images/scheduler_picture_1.png)
+[image 2 ](images/scheduler_picture_2.png)
