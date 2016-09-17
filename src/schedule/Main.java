@@ -64,6 +64,7 @@ public class Main extends javax.swing.JFrame {
         saturday_table = new javax.swing.JTable();
         sunday_pane = new javax.swing.JScrollPane();
         sunday_table = new javax.swing.JTable();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
 
         jMenu1.setText("jMenu1");
 
@@ -190,6 +191,21 @@ public class Main extends javax.swing.JFrame {
 
         week_tab.addTab("Sunday", sunday_pane);
 
+        jInternalFrame1.setVisible(true);
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        week_tab.addTab("tab8", jInternalFrame1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -201,16 +217,16 @@ public class Main extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(week_tab, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(320, Short.MAX_VALUE))
+                .addContainerGap(330, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(148, Short.MAX_VALUE)
                 .addComponent(week_tab, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59)
+                .addGap(36, 36, 36)
                 .addComponent(jButton1)
-                .addGap(16, 16, 16))
+                .addGap(39, 39, 39))
         );
 
         bindingGroup.bind();
@@ -281,6 +297,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane friday_pane;
     private javax.swing.JTable friday_table;
     private javax.swing.JButton jButton1;
+    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JScrollPane monday_pane;
